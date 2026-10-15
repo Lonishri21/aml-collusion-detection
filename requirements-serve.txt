@@ -1,0 +1,9 @@
+# Scoring API only (step 7 Docker image): no PyTorch, igraph, notebooks or tests.
+pandas>=2.1
+numpy>=1.26
+pyarrow>=14
+scipy>=1.11
+scikit-learn>=1.3
+xgboost>=2.0
+fastapi>=0.110
+uvicorn>=0.29

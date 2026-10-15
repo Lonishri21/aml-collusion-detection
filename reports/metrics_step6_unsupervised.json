@@ -1,0 +1,435 @@
+{
+  "isolation_forest": {
+    "model": "isolation_forest",
+    "params": {
+      "label_free": true
+    },
+    "n_features": 95,
+    "train_negative_sample_rate": 0.2,
+    "search": [],
+    "thresholds_from_val": {
+      "0.001": 0.5981548525099062,
+      "0.005": 0.5737156255350877,
+      "0.01": 0.5629921522933958,
+      "0.02": 0.5510261434751043,
+      "0.05": 0.5323034670468164
+    },
+    "validation": {
+      "pr_auc": 0.0026742851497144676,
+      "roc_auc": 0.7886472102754112
+    },
+    "test": {
+      "pr_auc": 0.002361771248064781,
+      "roc_auc": 0.7516573955031478,
+      "random_pr_auc": 0.0011252757811707791,
+      "recall_at_1pct": 0.06911636045494313,
+      "precision_at_1pct": 0.0018041472549556955,
+      "fpr_at_1pct": 0.04307969186129027,
+      "alerts_at_1pct": 43788,
+      "caught_at_1pct": 79,
+      "recall_at_equal_fpr_1pct": 0.008748906386701663
+    },
+    "test_by_budget": {
+      "0.001": {
+        "recall": 0.005249343832020997,
+        "precision": 0.0007795244900610628,
+        "fpr": 0.007580267453045905,
+        "alerts": 7697.0,
+        "caught": 6.0,
+        "alerts_per_day": 3308.561194029851
+      },
+      "0.005": {
+        "recall": 0.04024496937882765,
+        "precision": 0.0016035137867326664,
+        "fpr": 0.028228636084083707,
+        "alerts": 28687.0,
+        "caught": 46.0,
+        "alerts_per_day": 12331.128358208956
+      },
+      "0.01": {
+        "recall": 0.06911636045494313,
+        "precision": 0.0018041472549556955,
+        "fpr": 0.04307969186129027,
+        "alerts": 43788.0,
+        "caught": 79.0,
+        "alerts_per_day": 18822.304477611942
+      },
+      "0.02": {
+        "recall": 0.09361329833770779,
+        "precision": 0.0017279803623913956,
+        "fpr": 0.060925007490577644,
+        "alerts": 61922.0,
+        "caught": 107.0,
+        "alerts_per_day": 26617.217910447762
+      },
+      "0.05": {
+        "recall": 0.1609798775153106,
+        "precision": 0.001940027835181983,
+        "fpr": 0.09329711573336698,
+        "alerts": 94844.0,
+        "caught": 184.0,
+        "alerts_per_day": 40768.76417910448
+      }
+    },
+    "test_by_format": {
+      "ACH only": {
+        "pr_auc": 0.008834647748825615,
+        "roc_auc": 0.6038157343580728,
+        "random_pr_auc": 0.007226667052474717,
+        "laundering": 999.0,
+        "recall_at_1pct": 0.01701701701701702,
+        "lift_over_random": 1.2225065420441996
+      },
+      "all other formats": {
+        "pr_auc": 0.0012740455313191143,
+        "roc_auc": 0.9210885043807109,
+        "random_pr_auc": 0.00016410013298948277,
+        "laundering": 144.0,
+        "recall_at_1pct": 0.4305555555555556,
+        "lift_over_random": 7.763829974475208
+      }
+    },
+    "test_per_pattern": {
+      "GATHER-SCATTER": {
+        "attempts": 9,
+        "transactions": 31,
+        "recall_at_1pct": 0.0,
+        "attempts_with_any_alert": 0.0
+      }
+    },
+    "top_features_by_gain": null
+  },
+  "community_anomaly": {
+    "model": "community_anomaly",
+    "params": {
+      "label_free": true
+    },
+    "n_features": 95,
+    "train_negative_sample_rate": 0.2,
+    "search": [],
+    "thresholds_from_val": {
+      "0.001": 0.40311897852156964,
+      "0.005": 0.40311897852156964,
+      "0.01": 0.4016572233499899,
+      "0.02": 0.39647773906616823,
+      "0.05": 0.38697606118494987
+    },
+    "validation": {
+      "pr_auc": 0.0011646407649543806,
+      "roc_auc": 0.5321031873237682
+    },
+    "test": {
+      "pr_auc": 0.0012134408193878816,
+      "roc_auc": 0.5404532362896354,
+      "random_pr_auc": 0.0011252757811707791,
+      "recall_at_1pct": 0.0026246719160104987,
+      "precision_at_1pct": 0.0007204610951008645,
+      "fpr_at_1pct": 0.004101091258890133,
+      "alerts_at_1pct": 4164,
+      "caught_at_1pct": 3,
+      "recall_at_equal_fpr_1pct": 0.0026246719160104987
+    },
+    "test_by_budget": {
+      "0.001": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "fpr": 2.759686499613644e-05,
+        "alerts": 28.0,
+        "caught": 0.0,
+        "alerts_per_day": 12.035820895522388
+      },
+      "0.005": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "fpr": 2.759686499613644e-05,
+        "alerts": 28.0,
+        "caught": 0.0,
+        "alerts_per_day": 12.035820895522388
+      },
+      "0.01": {
+        "recall": 0.0026246719160104987,
+        "precision": 0.0007204610951008645,
+        "fpr": 0.004101091258890133,
+        "alerts": 4164.0,
+        "caught": 3.0,
+        "alerts_per_day": 1789.8985074626867
+      },
+      "0.02": {
+        "recall": 0.009623797025371828,
+        "precision": 0.00046830431265698836,
+        "fpr": 0.023139971299260403,
+        "alerts": 23489.0,
+        "caught": 11.0,
+        "alerts_per_day": 10096.764179104477
+      },
+      "0.05": {
+        "recall": 0.06824146981627296,
+        "precision": 0.0008518073604892432,
+        "fpr": 0.0901747275795184,
+        "alerts": 91570.0,
+        "caught": 78.0,
+        "alerts_per_day": 39361.432835820895
+      }
+    },
+    "test_by_format": {
+      "ACH only": {
+        "pr_auc": 0.008827786664451708,
+        "roc_auc": 0.5821088578140146,
+        "random_pr_auc": 0.007226667052474717,
+        "laundering": 999.0,
+        "recall_at_1pct": 0.0,
+        "lift_over_random": 1.2215571300505257
+      },
+      "all other formats": {
+        "pr_auc": 0.0002051905480175069,
+        "roc_auc": 0.49990634087697294,
+        "random_pr_auc": 0.00016410013298948277,
+        "laundering": 144.0,
+        "recall_at_1pct": 0.020833333333333332,
+        "lift_over_random": 1.2503984261283787
+      }
+    },
+    "test_per_pattern": {
+      "GATHER-SCATTER": {
+        "attempts": 9,
+        "transactions": 31,
+        "recall_at_1pct": 0.0,
+        "attempts_with_any_alert": 0.0
+      }
+    },
+    "top_features_by_gain": null
+  },
+  "combined": {
+    "model": "combined",
+    "params": {
+      "label_free": true
+    },
+    "n_features": 95,
+    "train_negative_sample_rate": 0.2,
+    "search": [],
+    "thresholds_from_val": {
+      "0.001": 0.9322981703273253,
+      "0.005": 0.909012442956105,
+      "0.01": 0.8861712662923932,
+      "0.02": 0.8536209461899603,
+      "0.05": 0.7552882070980661
+    },
+    "validation": {
+      "pr_auc": 0.005827121607873608,
+      "roc_auc": 0.8866652851807515
+    },
+    "test": {
+      "pr_auc": 0.0052089838004958245,
+      "roc_auc": 0.863978064427839,
+      "random_pr_auc": 0.0011252757811707791,
+      "recall_at_1pct": 0.05249343832020997,
+      "precision_at_1pct": 0.004077749082506457,
+      "fpr_at_1pct": 0.014443016416192264,
+      "alerts_at_1pct": 14714,
+      "caught_at_1pct": 60,
+      "recall_at_equal_fpr_1pct": 0.022747156605424323
+    },
+    "test_by_budget": {
+      "0.001": {
+        "recall": 0.007874015748031496,
+        "precision": 0.0018987341772151898,
+        "fpr": 0.004662884582025768,
+        "alerts": 4740.0,
+        "caught": 9.0,
+        "alerts_per_day": 2037.4925373134329
+      },
+      "0.005": {
+        "recall": 0.028871391076115485,
+        "precision": 0.0027385892116182572,
+        "fpr": 0.011843983094948985,
+        "alerts": 12050.0,
+        "caught": 33.0,
+        "alerts_per_day": 5179.701492537313
+      },
+      "0.01": {
+        "recall": 0.05249343832020997,
+        "precision": 0.004077749082506457,
+        "fpr": 0.014443016416192264,
+        "alerts": 14714.0,
+        "caught": 60.0,
+        "alerts_per_day": 6324.823880597015
+      },
+      "0.02": {
+        "recall": 0.09711286089238845,
+        "precision": 0.005641390526529782,
+        "fpr": 0.019283309416050335,
+        "alerts": 19676.0,
+        "caught": 111.0,
+        "alerts_per_day": 8457.74328358209
+      },
+      "0.05": {
+        "recall": 0.26334208223972005,
+        "precision": 0.00681535152269897,
+        "fpr": 0.04323246022109031,
+        "alerts": 44165.0,
+        "caught": 301.0,
+        "alerts_per_day": 18984.358208955226
+      }
+    },
+    "test_by_format": {
+      "ACH only": {
+        "pr_auc": 0.04830341824289327,
+        "roc_auc": 0.8614536869442545,
+        "random_pr_auc": 0.007226667052474717,
+        "laundering": 999.0,
+        "recall_at_1pct": 0.04104104104104104,
+        "lift_over_random": 6.684051983044124
+      },
+      "all other formats": {
+        "pr_auc": 0.0012124845963785496,
+        "roc_auc": 0.9094632329410114,
+        "random_pr_auc": 0.00016410013298948277,
+        "laundering": 144.0,
+        "recall_at_1pct": 0.13194444444444445,
+        "lift_over_random": 7.388687469596738
+      }
+    },
+    "test_per_pattern": {
+      "GATHER-SCATTER": {
+        "attempts": 9,
+        "transactions": 31,
+        "recall_at_1pct": 0.03225806451612903,
+        "attempts_with_any_alert": 0.1111111111111111
+      }
+    },
+    "top_features_by_gain": null
+  },
+  "cross_community": {
+    "train": {
+      "share_of_payments_crossing": 0.5359337873655778,
+      "laundering_rate_crossing": 0.0012097609022427437,
+      "laundering_rate_within": 0.00022707465592176746,
+      "share_of_laundering_crossing": 0.860191637630662,
+      "pr_auc": 0.001146003887200612,
+      "roc_auc": 0.6622512186490963
+    },
+    "val": {
+      "share_of_payments_crossing": 0.14558160149709445,
+      "laundering_rate_crossing": 0.0060686426401639956,
+      "laundering_rate_within": 0.00021441144634353555,
+      "share_of_laundering_crossing": 0.8282548476454293,
+      "pr_auc": 0.005209579769949122,
+      "roc_auc": 0.841701108744186
+    },
+    "test": {
+      "share_of_payments_crossing": 0.16464074364681897,
+      "laundering_rate_crossing": 0.005519212600308549,
+      "laundering_rate_within": 0.0002592758895814698,
+      "share_of_laundering_crossing": 0.8075240594925635,
+      "pr_auc": 0.004673485478514753,
+      "roc_auc": 0.8218037759182023
+    }
+  },
+  "patterns_all_days": {
+    "BIPARTITE": {
+      "attempts": 19,
+      "attempts_with_any_alert": 0.3157894736842105,
+      "transaction_recall": 0.09591023012075643
+    },
+    "CYCLE": {
+      "attempts": 19,
+      "attempts_with_any_alert": 0.3684210526315789,
+      "transaction_recall": 0.13358395989974936
+    },
+    "FAN-IN": {
+      "attempts": 12,
+      "attempts_with_any_alert": 0.5,
+      "transaction_recall": 0.15488782051282052
+    },
+    "FAN-OUT": {
+      "attempts": 18,
+      "attempts_with_any_alert": 0.5,
+      "transaction_recall": 0.08499078082411415
+    },
+    "GATHER-SCATTER": {
+      "attempts": 18,
+      "attempts_with_any_alert": 0.6666666666666666,
+      "transaction_recall": 0.17773253778671735
+    },
+    "RANDOM": {
+      "attempts": 8,
+      "attempts_with_any_alert": 0.5,
+      "transaction_recall": 0.19166666666666665
+    },
+    "SCATTER-GATHER": {
+      "attempts": 12,
+      "attempts_with_any_alert": 0.6666666666666666,
+      "transaction_recall": 0.18197496947496947
+    },
+    "STACK": {
+      "attempts": 12,
+      "attempts_with_any_alert": 0.6666666666666666,
+      "transaction_recall": 0.18238636363636362
+    }
+  },
+  "group_recovery": {
+    "BIPARTITE": {
+      "attempts": 19.0,
+      "share_recovered": 0.4681033721765987,
+      "all_recovered": 0.42105263157894735,
+      "median_community_size": 3529.0,
+      "random_share": 0.011099756336096264
+    },
+    "CYCLE": {
+      "attempts": 19.0,
+      "share_recovered": 0.5497076023391813,
+      "all_recovered": 0.47368421052631576,
+      "median_community_size": 1575.0,
+      "random_share": 0.007785043522708972
+    },
+    "FAN-IN": {
+      "attempts": 12.0,
+      "share_recovered": 0.5487179487179487,
+      "all_recovered": 0.4166666666666667,
+      "median_community_size": 2949.0,
+      "random_share": 0.008634067848218808
+    },
+    "FAN-OUT": {
+      "attempts": 18.0,
+      "share_recovered": 0.5552323448156781,
+      "all_recovered": 0.2777777777777778,
+      "median_community_size": 5204.5,
+      "random_share": 0.012418673219715008
+    },
+    "GATHER-SCATTER": {
+      "attempts": 18.0,
+      "share_recovered": 0.45612519546730074,
+      "all_recovered": 0.3333333333333333,
+      "median_community_size": 5544.5,
+      "random_share": 0.014703282963796848
+    },
+    "RANDOM": {
+      "attempts": 8.0,
+      "share_recovered": 0.515625,
+      "all_recovered": 0.5,
+      "median_community_size": 5483.5,
+      "random_share": 0.010270011138168141
+    },
+    "SCATTER-GATHER": {
+      "attempts": 12.0,
+      "share_recovered": 0.521358543417367,
+      "all_recovered": 0.25,
+      "median_community_size": 1134.5,
+      "random_share": 0.006762799949437009
+    },
+    "STACK": {
+      "attempts": 12.0,
+      "share_recovered": 0.3919061942959002,
+      "all_recovered": 0.3333333333333333,
+      "median_community_size": 2322.5,
+      "random_share": 0.008453996821527749
+    },
+    "all": {
+      "attempts": 118.0,
+      "share_recovered": 0.5017935294751528,
+      "all_recovered": 0.3728813559322034,
+      "median_community_size": 1925.0,
+      "random_share": 0.010299804009797124
+    }
+  }
+}

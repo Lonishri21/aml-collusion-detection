@@ -1,0 +1,11 @@
+# Only src/, models/xgb_graph.json, reports/metrics_step4_graph.json and requirements-serve.txt go
+# into the image; the data folder is mounted at run time.
+.venv/
+data/
+notebooks/
+tests/
+reports/figures/
+models/*.pt
+**/__pycache__/
+.pytest_cache/
+*.egg-info/

@@ -1,0 +1,26 @@
+# Data: too large for GitHub (the transactions file alone is ~475 MB). Download it from Kaggle.
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+
+# Environments
+.venv/
+venv/
+.env
+
+# Notebooks / editors
+.ipynb_checkpoints/
+.vscode/
+.idea/
+
+# Experiment tracking (later steps)
+mlruns/

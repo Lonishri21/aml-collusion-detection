@@ -1,0 +1,168 @@
+{
+  "model": "XGBoost baseline (step 2 features)",
+  "params": {
+    "n_estimators": 2000,
+    "learning_rate": 0.05,
+    "tree_method": "hist",
+    "eval_metric": "aucpr",
+    "early_stopping_rounds": 100,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "min_child_weight": 5,
+    "reg_lambda": 1.0,
+    "random_state": 42,
+    "max_depth": 6,
+    "scale_pos_weight": 1.0,
+    "best_iteration": 303
+  },
+  "n_features": 75,
+  "train_negative_sample_rate": 0.2,
+  "search": [
+    {
+      "run": 1,
+      "max_depth": 6,
+      "scale_pos_weight": 1.0,
+      "trees": 304,
+      "val_pr_auc": 0.5940362607305122,
+      "val_roc_auc": 0.9871395830846812,
+      "val_recall_at_1pct_fpr": 0.8291782086795937,
+      "minutes": 3.3152916471163434
+    },
+    {
+      "run": 3,
+      "max_depth": 8,
+      "scale_pos_weight": 16.285467859863104,
+      "trees": 678,
+      "val_pr_auc": 0.5922905732682483,
+      "val_roc_auc": 0.9870951665399242,
+      "val_recall_at_1pct_fpr": 0.8356417359187442,
+      "minutes": 6.488193786144256
+    },
+    {
+      "run": 0,
+      "max_depth": 4,
+      "scale_pos_weight": 1.0,
+      "trees": 524,
+      "val_pr_auc": 0.5873889628911799,
+      "val_roc_auc": 0.9872870889485696,
+      "val_recall_at_1pct_fpr": 0.8337950138504155,
+      "minutes": 4.525469998518626
+    },
+    {
+      "run": 2,
+      "max_depth": 6,
+      "scale_pos_weight": 16.285467859863104,
+      "trees": 240,
+      "val_pr_auc": 0.5608355158174491,
+      "val_roc_auc": 0.9880498900957042,
+      "val_recall_at_1pct_fpr": 0.8374884579870729,
+      "minutes": 3.198587346076965
+    }
+  ],
+  "thresholds_from_val": {
+    "0.001": 0.35255569219589233,
+    "0.005": 0.06411567330360413,
+    "0.01": 0.016433626413345337,
+    "0.02": 0.008346907794475555,
+    "0.05": 0.0041762893088161945
+  },
+  "validation": {
+    "pr_auc": 0.5940362607305122,
+    "roc_auc": 0.9871395830846812
+  },
+  "test": {
+    "pr_auc": 0.5582734605627351,
+    "roc_auc": 0.9867915035223203,
+    "random_pr_auc": 0.0011252757811707791,
+    "recall_at_1pct": 0.847769028871391,
+    "precision_at_1pct": 0.048247361083449514,
+    "fpr_at_1pct": 0.018839788371469574,
+    "alerts_at_1pct": 20084,
+    "caught_at_1pct": 969
+  },
+  "test_by_budget": {
+    "0.001": {
+      "recall": 0.5966754155730534,
+      "precision": 0.3825014021312395,
+      "fpr": 0.0010851481557409364,
+      "alerts": 1783.0,
+      "caught": 682.0,
+      "alerts_per_day": 766.4238805970149
+    },
+    "0.005": {
+      "recall": 0.7944006999125109,
+      "precision": 0.12210866057019903,
+      "fpr": 0.0064340119533849525,
+      "alerts": 7436.0,
+      "caught": 908.0,
+      "alerts_per_day": 3196.3701492537316
+    },
+    "0.01": {
+      "recall": 0.847769028871391,
+      "precision": 0.048247361083449514,
+      "fpr": 0.018839788371469574,
+      "alerts": 20084.0,
+      "caught": 969.0,
+      "alerts_per_day": 8633.1223880597
+    },
+    "0.02": {
+      "recall": 0.8757655293088364,
+      "precision": 0.026915113871635612,
+      "fpr": 0.03566894800750635,
+      "alerts": 37191.0,
+      "caught": 1001.0,
+      "alerts_per_day": 15986.579104477612
+    },
+    "0.05": {
+      "recall": 0.9168853893263342,
+      "precision": 0.014170204710781795,
+      "fpr": 0.0718602652452967,
+      "alerts": 73958.0,
+      "caught": 1048.0,
+      "alerts_per_day": 31790.901492537316
+    }
+  },
+  "test_by_format": {
+    "ACH only": {
+      "pr_auc": 0.6368113087361003,
+      "roc_auc": 0.9835706267842905,
+      "random_pr_auc": 0.007226667052474717,
+      "laundering": 999.0,
+      "recall_at_1pct": 0.9679679679679679,
+      "lift_over_random": 88.11964133839943
+    },
+    "all other formats": {
+      "pr_auc": 0.0015571410481559356,
+      "roc_auc": 0.9441523384750949,
+      "random_pr_auc": 0.00016410013298948277,
+      "laundering": 144.0,
+      "recall_at_1pct": 0.013888888888888888,
+      "lift_over_random": 9.488968837433747
+    }
+  },
+  "test_per_pattern": {
+    "GATHER-SCATTER": {
+      "attempts": 9,
+      "transactions": 31,
+      "recall_at_1pct": 1.0,
+      "attempts_with_any_alert": 1.0
+    }
+  },
+  "top_features_by_gain": {
+    "is_self_loop": 0.1782,
+    "payment_format_code": 0.1428,
+    "snd_in_cnt_24h": 0.0877,
+    "same_entity": 0.0514,
+    "pair_prior_cnt": 0.0504,
+    "rcv_in_mins_since_last": 0.0449,
+    "snd_out_distinct_cp_all": 0.0368,
+    "snd_out_cnt_1h": 0.0346,
+    "pair_reverse_prior_cnt": 0.0235,
+    "snd_in_mins_since_first": 0.0212,
+    "rcv_in_distinct_cp_all": 0.0179,
+    "snd_out_mins_since_last": 0.0173,
+    "snd_self_cnt_all": 0.0149,
+    "log_amount_usd": 0.0133,
+    "snd_in_distinct_cp_all": 0.0126
+  }
+}
